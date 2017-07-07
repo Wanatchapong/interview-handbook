@@ -3,9 +3,6 @@ package me.interview.exam;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Created by wanatchapong on 6/26/2017 AD.
- */
 public class DuplicateCharacterTest {
 
     @Test

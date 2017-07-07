@@ -1,7 +1,6 @@
 package me.interview.exam;
 
 /**
- * Created by wanatchapong on 7/6/2017 AD.
  * Rules: Any number divisible by 3 is replaced by the word "Fizz", any divisible by 5 by the word "Buzz", any divisible by 7 the word "Woof", Numbers divisible by both become "Fizz Buzz"
  * https://en.wikipedia.org/wiki/Fizz_buzz
  */

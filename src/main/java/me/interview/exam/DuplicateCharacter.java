@@ -4,9 +4,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/**
- * Created by wanatchapong on 6/26/2017 AD.
- */
 public final class DuplicateCharacter {
 
     private static Map<Character, Integer> getDuplicateCounts(String s) {

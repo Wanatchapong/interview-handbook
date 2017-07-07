@@ -1,8 +1,5 @@
 package me.interview.exam;
 
-/**
- * Created by wanatchapong on 6/26/2017 AD.
- */
 public final class PrimeNumber {
 
     public static boolean isPrime(int n) {
