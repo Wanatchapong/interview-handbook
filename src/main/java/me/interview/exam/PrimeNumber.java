@@ -1,5 +1,10 @@
 package me.interview.exam;
 
+/**
+ * A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+ * A natural number greater than 1 that is not a prime number is called a composite number
+ * https://en.wikipedia.org/wiki/Prime_number
+ */
 public final class PrimeNumber {
 
     public static boolean isPrime(int n) {
