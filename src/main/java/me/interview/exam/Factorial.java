@@ -4,12 +4,19 @@ import me.interview.exam.exception.NonNegativeIntegerException;
 
 /**
  * The factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.
+ * initially for integer n ≥ 1, and resulting in this fundamental recurrence relation:
  * (n + 1)! = (n + 1) x n!
- * E.g. 5! = 5 x 4!
+ *
+ * E.g.
+ * 5! = 5 x 4!
+ * 6! = 6 x 5!
+ * 50! = 50 x 49!
+ *
  * 0! In order for this recurrence relation to be extended to n=0, it is necessary to define
  * 0! = 1
  * so that
  * 1! = 1 x 0! = 1
+ *
  * https://en.wikipedia.org/wiki/Factorial
  */
 public final class Factorial {
@@ -20,7 +27,7 @@ public final class Factorial {
         }
     }
 
-    public static int calculateByForLoop(int n) throws NonNegativeIntegerException {
+    public static int forLoop(int n) throws NonNegativeIntegerException {
         assertNonNegativeInteger(n);
 
         if (n == 0) {
@@ -34,7 +41,7 @@ public final class Factorial {
         return value;
     }
 
-    public static int calculateByWhileLoop(int n) throws NonNegativeIntegerException {
+    public static int whileLoop(int n) throws NonNegativeIntegerException {
         assertNonNegativeInteger(n);
 
         if (n == 0) {
@@ -49,13 +56,13 @@ public final class Factorial {
         return value;
     }
 
-    public static int calculateByRecursive(int n) throws NonNegativeIntegerException {
+    public static int recursive(int n) throws NonNegativeIntegerException {
         assertNonNegativeInteger(n);
 
         if (n == 0 || n == 1) {
             return 1;
         }
 
-        return n * calculateByForLoop(n - 1);
+        return n * recursive(n - 1);
     }
 }

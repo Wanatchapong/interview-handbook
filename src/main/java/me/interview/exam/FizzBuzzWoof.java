@@ -7,33 +7,31 @@ package me.interview.exam;
 public class FizzBuzzWoof {
 
     public static String getFizzBuzzWoof(int n) {
-        String output = "";
-
+        StringBuilder output = new StringBuilder();
         for (int i = 1; i <= n; i++) {
 
             if (i % 3 != 0 && i % 5 != 0 && i % 7 != 0) {
-                output += i;
+                output.append(i);
             }
 
             if (i % 3 == 0) {
-                output += "Fizz";
+                output.append("Fizz");
 
             }
 
             if (i % 5 == 0) {
-                output += "Buzz";
+                output.append("Buzz");
 
             }
 
             if (i % 7 == 0) {
-                output += "Woof";
+                output.append("Woof");
             }
 
             if (i < n) {
-                output += ", ";
+                output.append(", ");
             }
         }
-
-        return output;
+        return output.toString();
     }
 }

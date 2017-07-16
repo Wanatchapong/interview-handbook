@@ -10,27 +10,33 @@ import org.junit.Test;
 public class FactorialTest {
 
     @Test
-    public void calculateByForLoop() throws NonNegativeIntegerException {
-        Assert.assertEquals(120, Factorial.calculateByForLoop(5));
+    public void forLoop() throws NonNegativeIntegerException {
+        Assert.assertEquals(120, Factorial.forLoop(5));
     }
 
     @Test
-    public void calculateByWhileLoop() throws Exception {
-        Assert.assertEquals(120, Factorial.calculateByWhileLoop(5));
+    public void whileLoop() throws Exception {
+        Assert.assertEquals(120, Factorial.whileLoop(5));
     }
 
     @Test
-    public void calculateByRecursive() throws Exception {
-        Assert.assertEquals(120, Factorial.calculateByRecursive(5));
+    public void recursive() throws Exception {
+        Assert.assertEquals(120, Factorial.recursive(5));
+    }
+
+    @Test
+    public void verifyTheory() throws Exception {
+        // 5! = 5 x 4!
+        Assert.assertEquals(Factorial.forLoop(5), (5 * Factorial.forLoop(4)));
     }
 
     @Test(expected = NonNegativeIntegerException.class)
     public void whenInputNegativeIntegerShouldBeThrowNonNegativeIntegerException() throws Exception {
-        Factorial.calculateByForLoop(-1);
+        Factorial.forLoop(-1);
     }
 
     @Test
     public void whenInputZeroShouldBeReturnOne() throws Exception {
-        Assert.assertEquals(1, Factorial.calculateByForLoop(0));
+        Assert.assertEquals(1, Factorial.forLoop(0));
     }
 }
